@@ -56,8 +56,8 @@ from iris_model_training.helpers import ModelIO
 
 raw_features = pd.DataFrame({
     "SepalLengthCm": [5.0],
-    "SepalWidthCm": [2.3]
-    "PetalLengthCm": [4.7]
+    "SepalWidthCm": [2.3],
+    "PetalLengthCm": [4.7],
     "PetalWidthCm": [1.0]
 })
 
