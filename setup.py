@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import re
 
 def _get_version():
-    VERSION_FILE = f"iris_model_serving/_version.py"
+    VERSION_FILE = f"iris_model_training/_version.py"
     with open(VERSION_FILE, "rt") as f:
         contents = f.read()
 
