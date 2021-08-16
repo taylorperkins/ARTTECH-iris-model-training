@@ -1,13 +1,14 @@
 from setuptools import setup, find_packages
 import re
 
+
 def _get_version():
     VERSION_FILE = f"iris_model_training/_version.py"
     with open(VERSION_FILE, "rt") as f:
         contents = f.read()
 
-    version_ptrn = re.compile(r"^__version__\s=\s['\"](?P<version>[^'\"]*)['\"]")
-    mo = version_ptrn.search(contents, re.M)
+    version_ptrn = re.compile(r"^__version__\s=\s['\"](?P<version>[^'\"]*)['\"]", re.M)
+    mo = version_ptrn.search(contents)
     try:
         return mo.group("version")
     except:
@@ -40,5 +41,5 @@ setup(
         "dev": dev_requirements
     },
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
 )
