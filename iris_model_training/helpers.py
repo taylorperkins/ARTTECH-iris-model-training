@@ -1,6 +1,7 @@
+from joblib import dump, load
 from pathlib import Path
 
-from joblib import dump, load
+from sklearn.neighbors import KNeighborsClassifier
 
 import iris_model_training.config as conf
 
@@ -12,9 +13,9 @@ class ModelIO:
     """
 
     @staticmethod
-    def save(clf, fp: Path = conf.MODEL_FP):
+    def save(clf: KNeighborsClassifier, fp: Path = conf.MODEL_FP):
         dump(clf, fp)
 
     @staticmethod
-    def load(fp: Path = conf.MODEL_FP):
+    def load(fp: Path = conf.MODEL_FP) -> KNeighborsClassifier:
         return load(fp)
