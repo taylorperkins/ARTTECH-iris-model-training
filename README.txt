@@ -10,7 +10,7 @@ python -m pip install IrisModelTraining
 ```
 or..
 ```
-python -m pip install git+https://github.com/taylorperkins/iris-model-training.git@master
+python -m pip install git+https://github.com/taylorperkins/ARTTECH-iris-model-training.git@master
 ```
 
 ### Some setup
